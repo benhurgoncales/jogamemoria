@@ -1,0 +1,76 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    padding:30px ;
+    background: rgb(0,127,203);
+background: radial-gradient(circle, rgba(0,127,203,1) 0%, rgba(43,95,126,1) 100%);
+
+}
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    margin: 0 0 30px;
+    border-radius: 5px ;
+    background-color: aliceblue;
+    font-size: 1.2em;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    max-width: 800px;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.card{
+    
+    aspect-ratio: 1/1;
+    width: 100%;
+    background-color: rgb(201, 201, 201);
+    border-radius: 7px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+
+    box-shadow: 1px 1px 3px #a5a5a5;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    
+}
+
+.front{
+   transform: rotateY(180deg);
+   
+}
+
+.back{
+    background-image: url(../memoryeprevs/backgroud.jpg);
+    backface-visibility: hidden;
+}
+
+.reveal-card{
+    transform: rotateY(180deg);
+}
+
+.disabled-card{
+    filter: saturate(0);
+    opacity: 0.5;
+
+}
