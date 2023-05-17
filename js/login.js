@@ -17,7 +17,7 @@ const enviar = (event) =>{
     event.preventDefault()
 
     localStorage.setItem('player', input.value)
-    window.location = '../paginas/game.html'
+    window.location = './game.html'
 
 }
 
